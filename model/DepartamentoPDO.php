@@ -58,9 +58,9 @@ class DepartamentoPDO {
 	public static function mostrarDepartamentos (){
 		$arrayDepartamentos = [];
 		$sql = "select * from Departamento";
-		$resultadoSQL = DBPDO::ejecutaConsulta($sql);
+		$resultadoSQL = DBPDO::ejecutaConsulta($sql,null);
 		if ($resultadoSQL->rowCount()) {
-			$arrayDepartamentos = $resultadoConsulta->fetchAll();
+			$arrayDepartamentos = $resultadoSQL->fetchAll();
 		}
 		
 

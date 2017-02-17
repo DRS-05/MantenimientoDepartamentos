@@ -39,7 +39,7 @@
 		</div>
 		<div class="tabla">
 			<?php 
-				$departamentos = Departamento::mostrarDepartamentos();
+				$departamentos = Departamento::mostrarDepartamentos(null);
 				echo "<p>Registros de la tabla Departamento</p>";
 				print "<table>";
 				print "<tr>";
@@ -56,7 +56,10 @@
 
 					print "<td>".$codDepartamento."</td>"."<td>".$descDepartamento."</td>";
 					print "<td>";
-					print "<div id='borrar'><a href='index.php?location=borrarDepartamento&CodDepartamento=$codDepartamento'</a></div>";
+					print "<div id='borrar'><a href='index.php?location=borrarDepartamento&CodDepartamento=$codDepartamento'>Borrar</a></div>";
+					print "</td>";
+					print "<td>";
+					print "<div id='editar'><a href='index.php?location=borrarDepartamento&CodDepartamento=$codDepartamento'>Editar</a></div>";
 					print "</td>";
 					print "</tr>";
 				}	

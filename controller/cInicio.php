@@ -15,10 +15,7 @@
 			unset($_SESSION['usuario']);
 			session_destroy();//Destruimos la sesion
 			//Y redireccionamos al index
-			header('Location: index.php');
-		}else{
-			//Si no se ha pulsado se muestra el layout de la pagina
-			include $layout;
+			header('Location: index.php?location=login');
 		}
 		
 	} else {
