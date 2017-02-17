@@ -11,6 +11,7 @@
 	</head>
 	<body>
 	<?php 
+		require_once "model/Departamento.php";
 		$usuario=$_SESSION['usuario'];
 	?>
 		<div class="formularios">
@@ -36,9 +37,34 @@
 				</br>
 			</form>
 		</div>
+		<div class="tabla">
+			<?php 
+				$departamentos = Departamento::mostrarDepartamentos();
+				echo "<p>Registros de la tabla Departamento</p>";
+				print "<table>";
+				print "<tr>";
+				print "<th>Código</th>";
+				print "<th>Descripción</th>";
+				print "<th>Eliminar Registro</th>";
+				print "<th>Modificar Registro</th>";
+				print "</tr>";
+				print "<tr>";
+				
+				foreach ($departamentos as $departamento) {
+					$codDepartamento = $departamento->getCodDepartamento();
+					$descDepartamento = $departamento->getDescDepartamento();
 
-		<?php 
-			
-		?>
+					print "<td>".$codDepartamento."</td>"."<td>".$descDepartamento."</td>";
+					print "<td>";
+					print "<div id='borrar'><a href='index.php?location=borrarDepartamento&CodDepartamento=$codDepartamento'</a></div>";
+					print "</td>";
+					print "</tr>";
+				}	
+
+				print "</table>";
+
+			?>
+		</div>
+		</table>
 	</body>
 </html>

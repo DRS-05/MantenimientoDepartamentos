@@ -12,4 +12,5 @@ if (isset($_SESSION['usuario'])) {
 	header('Location: index.php?Location=login');
 }
 
+//if (isset())
 ?>

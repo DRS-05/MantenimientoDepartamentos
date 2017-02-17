@@ -1,6 +1,6 @@
 <?php
 require_once "DepartamentoPDO.php";
-public class Departamento {
+class Departamento {
 	//Atributos de la clase
 	protected $codDepartamento;
 	protected $descDepartamento;
