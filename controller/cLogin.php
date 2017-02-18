@@ -9,6 +9,8 @@ require_once 'model/Usuario.php'; //Incluimos la clase Usuario
 //Preguntamos si se inicia sesion
 if (isset($_SESSION['usuario'])){
 	//Si se ha iniciado redirecionamos al index
+	session_start();
+	$_SESSION['usuario'] = $usuario;
 	header("Location: index.php?location=inicio");
 } else {
 	//Si no se ha logueado secomprueba la información del login
@@ -32,6 +34,7 @@ if (isset($_SESSION['usuario'])){
 	// A continuación preguntamos por el estado del flag
 	if ($entradaOk) {
 		//Si el usuario es correcto lo almacenamos en la sesion
+		session_start();
 		$_SESSION['usuario'] = $usuario;
 		//Redireccionamos al index,indicando la localizacion
 		header('Location: index.php?Location=inicio');

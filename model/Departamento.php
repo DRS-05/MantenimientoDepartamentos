@@ -12,9 +12,9 @@ class Departamento {
 		$this->descDepartamento = $descDepartamento;
 	}
 
-	public static function buscarDepartamentos($descripcion) {
+	public static function buscarDepartamento($descripcion) {
 		$arrayDepartamentos = [];
-		$departamentos = DepartamentoPDO::buscarDepartamentos($descripcion);
+		$departamentos = DepartamentoPDO::buscarDepartamento($descripcion);
 
 		foreach ($departamentos as $departamento) {
 			//Creamos un objeto departamento por cada vuelta

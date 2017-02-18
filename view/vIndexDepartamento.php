@@ -13,6 +13,12 @@
 	<?php 
 		require_once "model/Departamento.php";
 		$usuario=$_SESSION['usuario'];
+		/*echo "<pre>";
+		echo_r($_POST);
+		echo_r($_SESSION['departamentosListados']);
+		echo "</pre>";*/
+		$departamentos = $_SESSION['departamentosListados'];
+
 	?>
 		<div class="formularios">
 			<form name="FormBusqueda" action="index.php?location=indexDepartamento" method="post">
@@ -38,33 +44,49 @@
 			</form>
 		</div>
 		<div class="tabla">
-			<?php 
-				$departamentos = Departamento::mostrarDepartamentos(null);
-				echo "<p>Registros de la tabla Departamento</p>";
-				print "<table>";
-				print "<tr>";
-				print "<th>Código</th>";
-				print "<th>Descripción</th>";
-				print "<th>Eliminar Registro</th>";
-				print "<th>Modificar Registro</th>";
-				print "</tr>";
-				print "<tr>";
+			<?php 				
+				echo "<p>Registros de la tabla Departamento: </p>";
 				
-				foreach ($departamentos as $departamento) {
-					$codDepartamento = $departamento->getCodDepartamento();
-					$descDepartamento = $departamento->getDescDepartamento();
+					
+				if (!empty($departamentos)) {
+					echo "<table border=2>";
+					echo "<tr>";
+					echo "<th>Código</th>";
+					echo "<th>Descripción</th>";
+					echo "<th>Eliminar Registro</th>";
+					echo "<th>Modificar Registro</th>";
+					echo "</tr>";
+					echo "<tr>";
+					foreach ($departamentos as $departamento) {
+						$codDepartamento = $departamento->getCodDepartamento();
+						$descDepartamento = $departamento->getDescDepartamento();
 
-					print "<td>".$codDepartamento."</td>"."<td>".$descDepartamento."</td>";
-					print "<td>";
-					print "<div id='borrar'><a href='index.php?location=borrarDepartamento&CodDepartamento=$codDepartamento'>Borrar</a></div>";
-					print "</td>";
-					print "<td>";
-					print "<div id='editar'><a href='index.php?location=borrarDepartamento&CodDepartamento=$codDepartamento'>Editar</a></div>";
-					print "</td>";
-					print "</tr>";
-				}	
+						echo "<td>".$codDepartamento."</td>"."<td>".$descDepartamento."</td>";
+						echo "<td>";
+						echo "<div id='borrar'><a href='index.php?location=borrarDepartamento&CodDepartamento=$codDepartamento'>Borrar</a></div>";
+						echo "</td>";
+						echo "<td>";
+						echo "<div id='editar'><a href='index.php?location=borrarDepartamento&CodDepartamento=$codDepartamento'>Editar</a></div>";
+						echo "</td>";
+						echo "</tr>";
+					}	
 
-				print "</table>";
+					echo "</table>";
+			?>		
+					<button class="button" onclick="window.location.href='index.php'">Volver</button>
+
+			<?php
+
+				} else {
+			?>
+					<p>Lo sentimos no se han encontrado resultados que coincidan con la busqueda, vuelva a intentarlo.</p>
+					<form name="formVolver" action="index.php?location=indexDepartamento" method="post">
+						<button type="submit" name="listar">Listar todos los departamentos</button>
+					</form>
+					<a href="javascript:window.location.href='index.php'">Volver Atrás</a>
+
+			<?php
+				}
 
 			?>
 		</div>

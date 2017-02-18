@@ -6,7 +6,7 @@
 */
 //Recibimos el usuario a traves de la variable superglobal session
 $usuario = $_SESSION['usuario'];
-
+//$departamentos = $_SESSION['departamentosListados'];
 ?>
 <h1>Bienvenido a la aplicación <?php echo $usuario->getDescUsuario();?></h1>
 <p>A continuación podrá acceder al código fuente de cada uno de los archivos, cerrar su sesión de usuario o acceder al mantenimiento de los departamentos</p>

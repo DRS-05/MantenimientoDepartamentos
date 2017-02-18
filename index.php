@@ -10,8 +10,10 @@
  */
 
  require_once 'model/Usuario.php';//Incluimos la clase Usuario
- session_start();//Iniciamos o continuamos la sesion
+ require_once 'model/Departamento.php';//Incluimos la clase Departamento
  require_once 'config/config.php';// Fichero con la configuración de la navegacion de la página
+ session_start();//Iniciamos o continuamos la sesion
+
  $controlador = 'controller/cInicio.php';//Por defecto se establece el controlador de la pagina de inicio
 
  /*
