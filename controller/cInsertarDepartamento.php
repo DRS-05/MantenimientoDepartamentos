@@ -52,10 +52,12 @@ if (isset($_SESSION['usuario'])) {
 			$correcto = Departamento::insertarDepartamento($codigo,$descripcion);
 			$_SESSION['insert'] = $correcto;
 			include $layout;
+			header("Refresh: 5; url=index.php?location=indexDepartamento");
 		} else {
 			$correcto = false;
 			$_SESSION['insert'] = $correcto;
 			include $layout;
+			header("Refresh: 5; url=index.php?location=indexDepartamento");
 		}
 
 	}
