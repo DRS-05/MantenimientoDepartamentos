@@ -11,7 +11,8 @@ $controladores =[
     'login' => 'controller/cLogin.php',
     'indexDepartamento' => 'controller/cIndexDepartamento.php',
     'borrarDepartamento' => 'controller/cBorrarDepartamento.php',
-    'editarDepartamento' => 'controller/cEditarDepartamento.php'
+    'editarDepartamento' => 'controller/cEditarDepartamento.php',
+    'insertarDepartamento' => 'controller/cInsertarDepartamento.php'
 ];
 
 //Array con la lista de vistas disponibles. Clave - Valor (nombre del archivo)
@@ -20,6 +21,7 @@ $vistas = [
     'login' => 'view/vLogin.php',
     'indexDepartamento' => 'view/vIndexDepartamento.php',
     'borrarDepartamento' => 'view/vBorrarDepartamento.php',
-    'editarDepartamento' => 'view/vEditarDepartamento.php'
+    'editarDepartamento' => 'view/vEditarDepartamento.php',
+    'insertarDepartamento' => 'view/vInsertarDepartamento.php'
 ];
 ?>

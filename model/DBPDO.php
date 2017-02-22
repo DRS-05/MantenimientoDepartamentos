@@ -21,7 +21,7 @@
 				//Ejecutamos la consulta y guardamos el resultado
 				$sentenciaPreparada->execute($parametros); 
 			}catch (PDOException $excepcion){
-				$resultado="No existe el usuario";
+				$sentenciaPreparada ="Error: (".$excepcion->getCode().')'.$excepcion->getMessage();
 			}
 
 			unset ($conexion);

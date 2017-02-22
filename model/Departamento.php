@@ -4,7 +4,6 @@ class Departamento {
 	//Atributos de la clase
 	protected $codDepartamento;
 	protected $descDepartamento;
-	protected $volumenNegocio;
 
 
 	public function __construct($codDepartamento,$descDepartamento) {
@@ -27,14 +26,11 @@ class Departamento {
 	}
 
 	public static function insertarDepartamento($codigo,$descripcion) {
-		$insertadoOk = false;
+		$departamentoObjeto = new Departamento($codigo,$descripcion);
 		$resultadoInsertar = DepartamentoPDO::insertarDepartamento($codigo,$descripcion);
 
-		if ($resultadoInsertar) {
-			$insertadoOk = true;
-		}
-
-		return $insertadoOk;
+		
+		return $resultadoInsertar;
 	}
 
 	public static function borrarDepartamento($codigo) {
@@ -47,6 +43,20 @@ class Departamento {
 		
 		return $borradoOk;
 	}
+
+
+	/**
+     * Modifica la descripción de un departamento a partir de su código.
+     *
+     * @param   String      $codigo         Código del departamento.
+     * @param   String      $descripcion    Nueva descripción del departamento.
+     * @return  boolean     $resultadoModificar       Concreta si la operación se ha realizado correctamente o no.
+     */
+    public static function modificarDepartamento($codigo, $descripcion) {
+       $resultadoModificar = Departamento::modificarDepartamento($codigo,$descripcion);
+       return $resultadoModificar;
+
+    }
 
 	public static function mostrarDepartamentos() {
 		$arrayDepartamentos = [];
@@ -61,6 +71,7 @@ class Departamento {
 
 		return $arrayDepartamentos;
 	}
+
 
 	public function getCodDepartamento() {
 		return $this->codDepartamento;

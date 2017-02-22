@@ -30,16 +30,17 @@ if (isset($_SESSION['usuario'])) {
 		} else {
 			
 			include_once $layout;//Y por ultimo mostramos la vista
-			if (isset($_REQUEST['listar'])){
-				$departamentos = Departamento::mostrarDepartamentos();
-				$_SESSION['departamentosListados'] = $departamentos;//Guardamos en la sesión
+
+			if (isset($_POST['listar'])){
+				//$_SESSION['departamentosListados'] = Departamento::mostrarDepartamentos();//Guardamos en la sesión
 				include_once $layout;//Y por ultimo mostramos la vista
 			}
 		}
 
 
 	} else {
-		//Si el envio no se produce mostramos el array y guardamos los departamentos de la sesión en una variable
+		//Si el envio no se produce mostramos el layout y guardamos los departamentos de la sesión en una variable
+		$_SESSION['departamentosListados'] = Departamento::mostrarDepartamentos();
 		include_once $layout;
 	} 
 

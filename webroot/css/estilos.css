@@ -1,0 +1,336 @@
+body{
+	margin:0;
+	padding: 0;
+	border: 0;
+	background-color:#FFFAFA;
+	
+}
+
+header{
+	height:180px;
+	width:100%;
+	background-color:#4682B4;
+	text-align:center;
+	line-height:180px;
+	margin:0;
+}
+
+header h1{ 
+	margin:0;
+	font-family:Arial;
+	font-size:300%;
+	color:#fff;
+}
+
+#contenedor{
+	width:1400px;
+	margin:0 auto;
+	position:relative;
+	background-color:#F5F5F5;
+	height:1200px;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:center;
+	align-content:flex-start;
+	font-family:Arial;
+}
+
+footer{
+	position:absolute;
+	width:100%;
+	height:120px;
+	background-color:#4682B4;
+	text-align:center;
+	line-height:120px;
+	margin:0;
+	top:1380px;
+	
+}
+
+.formularios{
+	position:relative;
+	width:1000px;
+	height:300px;
+	margin:16px;
+	margin-top:32px;
+	margin-bottom:8px;
+	display:flex;
+	flex-flow:row wrap;
+}
+
+.formularios > div:first-child{
+	position:relative;
+	width:420px;
+	margin:16px;
+	/* margin-bottom:8px; */
+	border:2px solid #00008B;
+	box-shadow:7px 7px 10px 3px #000;
+}
+
+.formularios > div:first-child > p{
+	margin-top:0px;
+	padding-top:8px;
+	margin-bottom:30px;
+	padding-bottom:4px;
+	text-align:center;
+	background-color:#1E90FF;
+	color:#fff;
+	font-weight:900;
+}
+
+.formularios > div:first-child  label{
+	margin-left:30px;
+	margin-top:5px;
+}
+
+.formularios > div:last-child{
+	position:relative;
+	width:500px;
+	margin:16px;
+	/* margin-top:8px; */
+	border:2px solid #00008B;
+	box-shadow:7px 7px 10px 3px #000;
+	overflow:hidden;
+}
+
+.formularios > div:last-child > p{
+	margin-top:0px;
+	padding-top:8px;
+	margin-bottom:30px;
+	padding-bottom:4px;
+	text-align:center;
+	background-color:#1E90FF;
+	color:#fff;
+	font-weight:900;
+}
+
+#uno{
+	position:relative;
+	bottom:16px;
+	left:1px;
+}
+
+#dos{
+	position:relative;
+	bottom:25px;
+	left:0px;
+}
+
+#input1{
+	display:inline-block;
+	position:relative;
+	left:195px;
+	bottom:50px;
+	margin:0;
+	width:30%;
+	font-family: sans-serif;
+	font-size: 14px;
+
+}
+
+#input2{
+	display:inline-block;
+	position:relative;
+	left:228px;
+	bottom:60px;
+	margin:0;
+	width:50%;
+	font-family: sans-serif;
+	font-size: 14px;
+	
+}
+
+#label1{
+	display:inline-block;
+	position:relative;
+	bottom:10px;
+	margin-left:5px;
+	margin-top:5px;
+
+}
+
+#label2{
+	display:inline-block;
+	position:relative;
+	bottom:20px;
+	margin-left:5px;
+	margin-top:5px;
+}
+
+.formularios > div:last-child .button{
+	position:relative;
+	left:150px;
+	bottom:32px;
+}
+
+.formularios span{
+	font-size:x-small;
+	color:gray;
+	margin-left:5px;
+	
+}
+
+.tabla{
+	margin:16px;
+	margin-top:32px;
+	width:1000px;
+	border:2px solid black;
+	text-align:center;
+	box-shadow:7px 7px 10px 3px #000;
+}
+
+.tabla p:first-child{
+	margin:0px;
+	padding:8px;
+	background-color:#1E90FF;
+	color:#fff;
+	font-weight:900;
+}
+
+.tabla p:last-child{
+	font-weight:bold;
+}
+
+.tabla table{
+	position:relative;
+	left:267.5px;
+	border:2px solid #00008B;
+	border-collapse:collapse;
+}
+
+.tabla th{
+	background-color:#1E90FF;
+	color:#fff;
+	font-weight:bold;
+}
+
+label{
+	font-family:sans-serif;
+	
+}
+
+.formularios .error span{
+	font-size:small;
+	color:red;
+	margin-left:5px;
+	
+}
+
+.formularios > div:last-child .error{
+	position:relative;
+	bottom:40px;
+	
+}
+
+#borrar a{
+	text-decoration:none;
+	line-height:28px;
+}
+
+#mod a{
+	text-decoration:none;
+	line-height:28px;
+}
+
+img{
+	position:relative;
+	top:5px;
+}
+
+.button{
+	border-radius:4px;
+	background-color:#000;
+	color:#fff;
+	height:30px;
+	text-align:center;
+}
+
+.formulario{
+	position:relative;
+	width:1000px;
+	height:300px;
+	margin:16px;
+	margin-top:32px;
+	margin-bottom:8px;
+	box-shadow:7px 7px 10px 3px #000;
+}
+
+.formulario p{
+	margin-top:0px;
+	padding-top:8px;
+	margin-bottom:30px;
+	padding-bottom:4px;
+	text-align:center;
+	background-color:#1E90FF;
+	color:#fff;
+	font-weight:900;
+}
+
+.formulario span{
+	font-size:x-small;
+	color:gray;
+	margin-left:5px;
+	
+}
+
+.formulario  .button{
+	position:relative;
+	left:432px;
+	bottom:20px;
+}
+
+#tres{
+	position:relative;
+	top:17px;
+	left:1px;
+}
+
+#input3{
+	display:inline-block;
+	position:relative;
+	left:0px;
+	bottom:0px;
+	margin:0;
+	width:30%;
+	font-family: sans-serif;
+	font-size: 14px;
+
+}
+
+#input4{
+	display:inline-block;
+	position:relative;
+	left:230px;
+	bottom:20px;
+	margin:0;
+	width:50%;
+	font-family: sans-serif;
+	font-size: 14px;
+	
+}
+
+#label3{
+	display:inline-block;
+	position:relative;
+	bottom:0px;
+	margin-left:5px;
+	margin-top:5px;
+
+}
+
+#label4{
+	display:inline-block;
+	position:relative;
+	top:20px;
+	margin-left:5px;
+	margin-top:5px;
+}
+
+.button1{
+	border-radius:4px;
+	background-color:#000;
+	color:#fff;
+	height:30px;
+	text-align:center;
+	
+}

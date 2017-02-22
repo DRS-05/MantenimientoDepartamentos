@@ -6,15 +6,15 @@
 		<meta name="keywords" content="HTML5, CSS3, JavaScript"/>
 		<meta name="viewport" content= "width=device-width, initial-scale=1.0, user-scalable=no"/>
 		<meta name="author" content="David Romero"/>
-		<link rel="stylesheet" href="webroot/css/reset.css">
-		<link rel="stylesheet" href="webroot/css/stylos.css">
+		<!--<link rel="stylesheet" href="webroot/css/reset.css">-->
+		<link rel="stylesheet" href="webroot/css/estilos.css">
 		<title>Mantenimiento departamento MVC</title>
 	</head>
 	<body>
 		<header>
 			<h1>MANTENIMIENTO DEPARTAMENTOS</h1>
 		</header>
-		<main>
+		<div id="contenedor">
 			<?php 
 				/*
 			     * Controla qué vista se va a mostrar en base a la localización (página actual) del usuario.
@@ -23,6 +23,7 @@
 			     *
 			     * Autor: Santiago Huerga Bartolomé.
 			     * Editado por: Pablo Mora Martín.
+			     * Editado de nuevo por: David Romero Sánchez
 			     * Fecha de última modificación: 23/01/2017
 			     */
 			    $layout = "view/vInicio.php"; //Por defecto, se marca como layout la vista de inicio.
@@ -38,6 +39,9 @@
 			    //FInalmente, se muestra la vista elegida
 			    include $layout;
 			?>
-		</main>
+		</div>
+		<footer>
+			<p>Aplicación desarrollada por: David Romero Sánchez</p>
+		</footer>
 	</body>
 </html>
