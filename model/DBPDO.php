@@ -21,7 +21,7 @@
 				//Ejecutamos la consulta y guardamos el resultado
 				$sentenciaPreparada->execute($parametros); 
 			}catch (PDOException $excepcion){
-				$sentenciaPreparada ="Error: (".$excepcion->getCode().')'.$excepcion->getMessage();
+				$sentenciaPreparada = NULL;
 			}
 
 			unset ($conexion);

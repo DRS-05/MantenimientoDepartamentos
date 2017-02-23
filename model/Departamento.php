@@ -29,7 +29,6 @@ class Departamento {
 		$departamentoObjeto = new Departamento($codigo,$descripcion);
 		$resultadoInsertar = DepartamentoPDO::insertarDepartamento($codigo,$descripcion);
 
-		
 		return $resultadoInsertar;
 	}
 

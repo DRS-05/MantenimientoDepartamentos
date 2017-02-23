@@ -9,6 +9,7 @@ require_once 'model/Departamento.php';
 $layout = 'view/layout.php';//En esta variable guardamos la localización de la vista
 /*Comprobamos que el usuario exite en la sesión*/
 if (isset($_SESSION['usuario'])) {
+
 	if (isset($_POST['insertar'])) {
 		$patronCodigo="/^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+$/";//Patron para el codigo
 		$patronDescripcion="/^[0-9a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$/";//Patron para la
@@ -35,7 +36,7 @@ if (isset($_SESSION['usuario'])) {
 		/*Preguntamos si se lleno el campo descripcion*/
 		if(!empty(trim($descripcion))){
 			/*Si se relleno comprobamos el formato*/
-			if(!preg_match($patronDescripcion,$descripcion) || strlen($descripcion)>50){
+			if(preg_match($patronDescripcion,$descripcion) || strlen($descripcion)>50){
 				//$errores{'erroresInsert'}['errorDescripcion']='No coincide con el patrón,solo caractéres alfabéticos, 50 caractéres como máximo';
 				$EnvioOk=false;//Entrada false
 				$descripcion="";//Limpiamos el campo
