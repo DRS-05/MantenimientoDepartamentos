@@ -32,7 +32,7 @@ if (isset($_SESSION['usuario'])) {
 			include_once $layout;//Y por ultimo mostramos la vista
 
 			if (isset($_POST['listar'])){
-				//$_SESSION['departamentosListados'] = Departamento::mostrarDepartamentos();//Guardamos en la sesión
+				$_SESSION['departamentosListados'] = Departamento::mostrarDepartamentos();//Guardamos en la sesión
 				include_once $layout;//Y por ultimo mostramos la vista
 			}
 		}
@@ -40,7 +40,7 @@ if (isset($_SESSION['usuario'])) {
 
 	} else {
 		//Si el envio no se produce mostramos el layout y guardamos los departamentos de la sesión en una variable
-		//$_SESSION['departamentosListados'] = Departamento::mostrarDepartamentos();
+		$_SESSION['departamentosListados'] = Departamento::mostrarDepartamentos();
 		include_once $layout;
 	} 
 

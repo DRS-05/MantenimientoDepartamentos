@@ -1,10 +1,6 @@
 <?php 
 	require_once "model/Departamento.php";
 	$usuario=$_SESSION['usuario'];
-	/*echo "<pre>";
-	print_r($_POST);
-	print_r($_SESSION['usuario']);
-	echo "</pre>";*/
 	$departamentos = $_SESSION['departamentosListados'];
 
 ?>
@@ -68,7 +64,9 @@
 				echo "</table>";
 		?>		
 				<button class="button" onclick="window.location.href='index.php'">Volver</button>
-
+				<form action="index.php?location=indexDepartamento" method="post">
+					<button class="button" type="submit" name="listar">Listar Departamentos</button>
+				</form>
 		<?php
 
 			} else {
