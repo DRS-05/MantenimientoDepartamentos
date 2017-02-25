@@ -40,7 +40,7 @@ if (isset($_SESSION['usuario'])) {
 
 	} else {
 		//Si el envio no se produce mostramos el layout y guardamos los departamentos de la sesión en una variable
-		$_SESSION['departamentosListados'] = Departamento::mostrarDepartamentos();
+		//$_SESSION['departamentosListados'] = Departamento::mostrarDepartamentos();
 		include_once $layout;
 	} 
 

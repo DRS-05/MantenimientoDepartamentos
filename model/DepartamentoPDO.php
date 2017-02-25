@@ -21,8 +21,7 @@ class DepartamentoPDO {
 		$departamentoInsertado = false;
 		$parametrosConsulta = [$codigo,$descripcion];
 		$sentenciaSQL = "insert into Departamento values (?,?)";
-		$resultadoAnadir = DBPDO::ejecutaConsulta($sentenciaSQL,$parametrosConsulta);
-		if ($resultadoAnadir) {
+		if (DBPDO::ejecutaConsulta($sentenciaSQL,$parametrosConsulta)) {
 			$departamentoInsertado = true;
 		}
 

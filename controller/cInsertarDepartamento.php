@@ -16,52 +16,41 @@ if (isset($_SESSION['usuario'])) {
 		$EnvioOk=true;
 		$codigo = strtoupper($_POST['codigo']);
 		$descripcion = $_POST['descripcion'];
-		/*Preguntamos si el campo codigo se relleno*/
-		if(!empty(trim($codigo))){
-			/*Si se relleno comprobamos el formato*/
-			if(!preg_match($patronCodigo,$codigo)|| strlen($codigo)!=3){
-				/*Si no coincide con el patron y el numero de caracteres*/
-				//$errores{"erroresInsert"}["errorCodigo"]='Solo se admiten 3 caracteres alfanumericos';//Guardo el error en el array de errores
-				$EnvioOk=false;//Entrada a false
-				$codigo="";//Limpiamos el campo
+
+		if ( !empty(trim($codigo)) && !empty(trim($descripcion)) ) {//Si las variables de codigo y descripción no estan vacías comprobamos los formatos
+			//Primero el codigo
+			if (!preg_match($patronCodigo, $codigo) || strlen($codigo)!=3) {
+				$EnvioOk = false;
+				$codigo = "";//Limpiamos el campo
 			}
-			
-		}else{
-			/*Si no se rellena*/
-			//$errores{"erroresInsert"}["errorCodigo"]='Rellena el campo!';//Guardo el error en el array de errores
-			$EnvioOk=false;//Entrada a false
-			$codigo="";//Limpiamos el campo
-		}
 
-		/*Preguntamos si se lleno el campo descripcion*/
-		if(!empty(trim($descripcion))){
-			/*Si se relleno comprobamos el formato*/
-			if(preg_match($patronDescripcion,$descripcion) || strlen($descripcion)>50){
-				//$errores{'erroresInsert'}['errorDescripcion']='No coincide con el patrón,solo caractéres alfabéticos, 50 caractéres como máximo';
-				$EnvioOk=false;//Entrada false
-				$descripcion="";//Limpiamos el campo
-			} 
+			if (!preg_match($patronDescripcion, $descripcion) || strlen($descripcion)>250 ) {
+				$EnvioOk = false;
+				$descripcion = "";//Limpiamos el campo
+			}
 
-		} else{
-			//$errores{'erroresInsert'}['errorDescripcion']='No se permite enviar valores vacios';//Guardo el error en el array de errores
-			$EnvioOk=false;//Entrada false
-			$descripcion="";//Limpiamos el campo
-		}
-
-		/*Preguntamos si el formulario se envio correctamente*/
-		if ($EnvioOk) {
-			$correcto = Departamento::insertarDepartamento($codigo,$descripcion);
-			$_SESSION['insert'] = $correcto;
-			include $layout;
-			header("Refresh: 5; url=index.php?location=indexDepartamento");
 		} else {
-			$correcto = false;
-			$_SESSION['insert'] = $correcto;
+			$EnvioOk = false;
+			$descripcion = "";//Limpiamos el campo
+			$codigo = "";
+		}
+
+		if ($EnvioOk) {
+			$_SESSION['insertado'] = Departamento::insertarDepartamento($codigo,$descripcion);
+			$_SESSION['departamentosListados'] = Departamento::mostrarDepartamentos();
+			include $layout;
+			header("Refresh: 5; url=index.php?location=indexDepartamento");
+
+		} else {
+			$_SESSION['insertado'] = false;
 			include $layout;
 			header("Refresh: 5; url=index.php?location=indexDepartamento");
 		}
 
-	}
+		
+		
+
+	} 
 
 } else {
 	//Si el usuario no existe en la sesión redireccionamos al login
