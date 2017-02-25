@@ -5,23 +5,19 @@
 * Autor: David Romero
 */
 require_once "model/Departamento.php";
-//$usuario=$_SESSION['usuario'];
+//Recibimos los departamentos listados en la sesión
 $departamentos = $_SESSION['departamentosListados'];
-//$correcto = $_SESSION['insert'];
-echo "<pre>";
-//var_dump($correcto);
-//var_dump($_SESSION);
-var_dump($_SESSION['insertado']);
-echo "</pre>";
 
 
-if ($_SESSION['insertado']) {
+
+if ($_SESSION['insertado']) {//Si tiene valor true, el envio fue correcto
+	//Mostramos la vista
 ?>
 	<div id="respuesta">
 		<p>Departamento introducido <b>correctamente</b>, en breve se le devolvera al index</p>
 	</div>
 <?php	
-} else {
+} else {//Si el valor es false, el envio no se produjó
 	?>
 	<div id="respuesta">
 		<p>El departamento <b>no</b> pudo ser introducido,pruebe de nuevo, en breve se le devolvera al index</p>
