@@ -6,30 +6,10 @@
 */
 //Recibimos el usuario a traves de la variable superglobal session
 $usuario = $_SESSION['usuario'];
-//$departamentos = $_SESSION['departamentosListados'];
+
 ?>
 <h1>Bienvenido a la aplicación <?php echo $usuario->getDescUsuario();?></h1>
 <p>A continuación podrá acceder al código fuente de cada uno de los archivos, cerrar su sesión de usuario o acceder al mantenimiento de los departamentos</p>
-<!--Caja con los enlaces a los códigos fuente -->
-<div class="codigos_fuente">
-	<a href="">DBPDO.php</a>
-	<a href="">UsuarioDB.php</a>
-	<a href="">UsuarioPDO.php</a>
-	<a href="">Usuario.php</a>
-	<a href="">DepartamentoPDO.php</a>
-	<a href="">Departamento.php</a>
-	<a href="">layout.php</a>
-	<a href="">vIncio.php</a>
-	<a href="">vLogin.php</a>
-	<a href="">vIndexDepartamento.php</a>
-	<a href="">vBorrarDepartamento.php</a>
-	<a href="">vEditarDepartamento.php</a>
-	<a href="">cInicio.php</a>
-	<a href="">cLogin.php</a>
-	<a href="">cIndexDepartamento.php</a>
-	<a href="">cBorrarDepartamento.php</a>
-	<a href="">cEditarDepartamento.php</a>
-</div>
 <!--Boton para acceder a la aplicación -->
 <form action="index.php?location=indexDepartamento" method="post">
 	<button type="submit" name="acceso">Ir al Mantenimiento</button>
@@ -39,3 +19,28 @@ $usuario = $_SESSION['usuario'];
 <form action="index.php?location=inicio" method="post">
 	<button type="submit" name="salir" value="salir">Cerrar Sesión</button>
 </form>
+<!--Caja con los enlaces a los códigos fuente -->
+<div class="codigos_fuente">
+	<ul>
+		<li><a href="mostrar_DBPDO.php">DBPDO.php</a></li>
+		<li><a href="mostrar_UsuarioDB.php">UsuarioDB.php</a></li>
+		<li><a href="mostrar_UsuarioPDO.php">UsuarioPDO.php</a></li>
+		<li><a href="mostrar_Usuario.php">Usuario.php</a></li>
+		<li><a href="mostrar_DepartamentoPDO.php">DepartamentoPDO.php</a></li>
+		<li><a href="mostrar_Departamento.php">Departamento.php</a></li>
+		<li><a href="mostrar_layout.php">layout.php</a></li>
+		<li><a href="mostrar_vInicio.php">vIncio.php</a></li>
+		<li><a href="mostrar_vLogin.php">vLogin.php</a></li>
+		<li><a href="mostrar_vIndexDepartamento.php">vIndexDepartamento.php</a></li>
+		<li><a href="mostrar_vBorrarDepartamento.php">vBorrarDepartamento.php</a></li>
+		<li><a href="mostrar_vEditarDepartamento.php">vEditarDepartamento.php</a></li>
+		<li><a href="mostrar_vInsertarDepartamento.php">vInsertarDepartamento.php</a></li>
+		<li><a href="mostrar_cInicio.php">cInicio.php</a></li>
+		<li><a href="mostrar_cLogin.php">cLogin.php</a></li>
+		<li><a href="mostrar_cIndexDepartamento.php">cIndexDepartamento.php</a></li>
+		<li><a href="mostrar_cBorrarDepartamento.php">cBorrarDepartamento.php</a></li>
+		<li><a href="mostrar_cEditarDepartamento.php">cEditarDepartamento.php</a></li>
+		<li><a href="mostrar_cInsertarDepartamento.php">cInsertarDepartamento.php</a></li>
+		<li><a href="mostrar_index.php">index.php</a></li>
+	</ul>
+</div>
