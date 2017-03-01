@@ -1,5 +1,5 @@
 <?php 
-	show_source("model/DepartamentoPDO.php");
+	show_source("../view/vInsertarDepartamento.php");
 
 	echo "<button  onclick='window.history.back()'>Volver</button>";
 ?>

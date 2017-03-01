@@ -1,5 +1,5 @@
 <?php 
-	show_source("controller/cInsertarDepartamento.php");
+	show_source("../view/layout.php");
 
 	echo "<button  onclick='window.history.back()'>Volver</button>";
 ?>
