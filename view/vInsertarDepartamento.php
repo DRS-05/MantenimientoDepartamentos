@@ -20,7 +20,7 @@ if ($_SESSION['insertado']) {//Si tiene valor true, el envio fue correcto
 } else {//Si el valor es false, el envio no se produjó
 	?>
 	<div id="respuesta">
-		<p>El departamento <b>no</b> pudo ser introducido,pruebe de nuevo, en breve se le devolvera al index</p>
+		<p>El departamento <b>no</b> pudo ser introducido,<b>pruebe</b> de nuevo, en breve se le devolvera al index</p>
 	</div>
 <?php	
 }

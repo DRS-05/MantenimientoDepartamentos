@@ -33,12 +33,7 @@ class Departamento {
 	}
 
 	public static function borrarDepartamento($codigo) {
-		$borradoOk = false;
-		$resultadoBorrar = DepartamentoPDO::borrarDepartamento($codigo);
-
-		if ($resultadoBorrar) {
-			$borradoOk = true;
-		}
+		$borradoOk = DepartamentoPDO::borrarDepartamento($codigo);
 		
 		return $borradoOk;
 	}

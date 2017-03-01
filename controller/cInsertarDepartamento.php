@@ -5,7 +5,7 @@
 * Autor: David Romero
 */
 require_once 'model/Departamento.php';
-//$criterioBusqueda = "";
+
 $layout = 'view/layout.php';//En esta variable guardamos la localización de la vista
 /*Comprobamos que el usuario exite en la sesión*/
 if (isset($_SESSION['usuario'])) {
@@ -45,12 +45,12 @@ if (isset($_SESSION['usuario'])) {
 			$_SESSION['insertado'] = Departamento::insertarDepartamento($codigo,$descripcion);
 			$_SESSION['departamentosListados'] = Departamento::mostrarDepartamentos();
 			include $layout;
-			header("Refresh: 5; url=index.php?location=indexDepartamento");
+			header("Refresh: 2; url=index.php?location=indexDepartamento");
 
 		} else {
 			$_SESSION['insertado'] = false;
 			include $layout;
-			header("Refresh: 5; url=index.php?location=indexDepartamento");
+			header("Refresh: 2; url=index.php?location=indexDepartamento");
 		}
 
 		

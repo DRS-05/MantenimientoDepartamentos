@@ -28,7 +28,7 @@ class DepartamentoPDO {
 		return $departamentoInsertado;
 	}
 
-	public static function modificarDepartamento ($codigo,$descripcion) {
+	public static function modificarDepartamento($codigo,$descripcion) {
 		$departamentoModificado = false;
 		$parametrosConsulta = [$codigo,$descripcion];
 		$sentenciaSQL = "update Departamento set DescDepartamento=? where CodDepartamento=?";
@@ -41,10 +41,10 @@ class DepartamentoPDO {
 
 	}
 
-	public static function borrarDepartamento ($codigo) {
+	public static function borrarDepartamento($codigo) {
 		$departamentoBorrado = false;
 		$parametrosConsulta =[$codigo];
-		$sentenciaBorrado= "delete * from Departamento where CodDepartamento=?";
+		$sentenciaBorrado= "delete from Departamento where CodDepartamento=?";
 		$resultadoBorrado = DBPDO::ejecutaConsulta($sentenciaBorrado,$parametrosConsulta);
 
 		if ($resultadoBorrado) {
@@ -54,7 +54,7 @@ class DepartamentoPDO {
 		return $departamentoBorrado;
 	}
 
-	public static function mostrarDepartamentos (){
+	public static function mostrarDepartamentos(){
 		$arrayDepartamentos = [];
 		$sql = "select * from Departamento";
 		$resultadoSQL = DBPDO::ejecutaConsulta($sql,null);
