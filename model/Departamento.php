@@ -44,11 +44,11 @@ class Departamento {
      *
      * @param   String      $codigo         Código del departamento.
      * @param   String      $descripcion    Nueva descripción del departamento.
-     * @return  boolean     $resultadoModificar       Concreta si la operación se ha realizado correctamente o no.
+     * @return  boolean     $modificadoOk       Concreta si la operación se ha realizado correctamente o no.
      */
     public static function modificarDepartamento($codigo, $descripcion) {
-       $resultadoModificar = Departamento::modificarDepartamento($codigo,$descripcion);
-       return $resultadoModificar;
+       $modificadoOk = Departamento::modificarDepartamento($codigo,$descripcion);
+       return $modificadoOk;
 
     }
 

@@ -1,8 +1,13 @@
 <?php 
-	require_once "model/Departamento.php";
-	$usuario=$_SESSION['usuario'];
-	$departamentos = $_SESSION['departamentosListados'];
-
+require_once "model/Departamento.php";
+$usuario=$_SESSION['usuario'];
+$departamentos = $_SESSION['departamentosListados'];
+echo "<pre>";
+print_r($_GET);
+print_r($_SESSION);
+print_r($_POST);
+print_r($_SESSION['modificado']);
+echo "</pre>";
 ?>
 	<div class="formularios">
 		<div>
@@ -56,7 +61,7 @@
 					echo "<div id='borrar'><a href='index.php?location=borrarDepartamento&CodDepartamento=$codDepartamento'>Borrar</a></div>";
 					echo "</td>";
 					echo "<td>";
-					echo "<div id='editar'><a href='index.php?location=editarDepartamento&CodDepartamento=$codDepartamento'>Editar</a></div>";
+					echo "<div id='editar'><a href='index.php?location=editarDepartamento&CodDepartamento=$codDepartamento&DescDepartamento=$descDepartamento'>Editar</a></div>";
 					echo "</td>";
 					echo "</tr>";
 				}	

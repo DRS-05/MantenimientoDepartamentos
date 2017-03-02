@@ -2,7 +2,6 @@
 
 <div id="respuesta">
 	<p>Departamento borrado con exito</p></br>
-	<p>Volviendo...</p>
 </div>
 
 <div>

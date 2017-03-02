@@ -30,10 +30,10 @@ class DepartamentoPDO {
 
 	public static function modificarDepartamento($codigo,$descripcion) {
 		$departamentoModificado = false;
-		$parametrosConsulta = [$codigo,$descripcion];
+		$parametrosConsulta = [$descripcion,$codigo];
 		$sentenciaSQL = "update Departamento set DescDepartamento=? where CodDepartamento=?";
-		$resultadoModificacion = DBPDO::ejecutaConsulta($sentenciaSQL,$parametrosConsulta);
-		if ($resultadoModificacion) {
+	
+		if (DBPDO::ejecutaConsulta($sentenciaSQL,$parametrosConsulta)) {
 			$departamentoModificado = true;
 		}
 
