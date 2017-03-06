@@ -10,14 +10,15 @@ $layout = 'view/layout.php';//En esta variable guardamos la localización de la 
 
 /*Comprobamos que el usuario exite en la sesión*/
 if (isset($_SESSION['usuario'])) {
-	$codigo = $_GET['CodDepartamento'];
-	$descripcion = $_GET['DescDepartamento'];
-	include $layout;
+	$codigo = $_REQUEST['CodDepartamento'];
+	$descripcion = $_REQUEST['DescDepartamento'];
+	
 
 	if (isset($_POST['aceptar'])) {
+		echo "string";
 		$patronDescripcion="/^[0-9a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$/";//Patron para la
-		$codigo = $_POST['codigo'];
-		$nuevaDescripcion = $_POST ['descripcion'];//Recibimos la descripción del formulario
+		// $codigo = $_POST['CodDepartamento'];
+		$nuevaDescripcion = $_POST['DescDepartamento'];//Recibimos la descripción del formulario
 		$EnvioOk=true;//Flag para permitir modificar la descripcion del departamento o no
 
 		if (!empty(trim($nuevaDescripcion))) {
@@ -43,6 +44,9 @@ if (isset($_SESSION['usuario'])) {
 		}
 		
 
+	}
+	else {
+		include $layout;
 	} 
 
 } else {

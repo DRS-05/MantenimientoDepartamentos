@@ -47,7 +47,7 @@ class Departamento {
      * @return  boolean     $modificadoOk       Concreta si la operación se ha realizado correctamente o no.
      */
     public static function modificarDepartamento($codigo, $descripcion) {
-       $modificadoOk = Departamento::modificarDepartamento($codigo,$descripcion);
+       $modificadoOk = DepartamentoPDO::modificarDepartamento($codigo,$descripcion);
        return $modificadoOk;
 
     }
