@@ -2,7 +2,13 @@
 /**
 * Vista que aparece una vez que estemos logueados
 *
-*Autor: David Romero
+* Contiene el acceso al mantenimiento de los departamentos, 
+* la posibilidad de cerrar la sesión y el acceso al código fuente 
+* de todos los archivos .php que conforman la aplicacion
+* 
+* Autor: David Romero
+*
+* Agradecimientos a Santiago Huerga Bartolomé por la estructura
 */
 //Recibimos el usuario a traves de la variable superglobal session
 $usuario = $_SESSION['usuario'];
@@ -35,6 +41,7 @@ $usuario = $_SESSION['usuario'];
 		<li><a href="doc/mostrar_vBorrarDepartamento.php">vBorrarDepartamento.php</a></li>
 		<li><a href="doc/mostrar_vEditarDepartamento.php">vEditarDepartamento.php</a></li>
 		<li><a href="doc/mostrar_vInsertarDepartamento.php">vInsertarDepartamento.php</a></li>
+		<li><a href="doc/mostrar_vEditarDepartamento.php">vEditarDepartamento.php</a></li>
 		<li><a href="doc/mostrar_cInicio.php">cInicio.php</a></li>
 		<li><a href="doc/mostrar_cLogin.php">cLogin.php</a></li>
 		<li><a href="doc/mostrar_cIndexDepartamento.php">cIndexDepartamento.php</a></li>

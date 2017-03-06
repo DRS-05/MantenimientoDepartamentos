@@ -1,4 +1,9 @@
-<?php 
+<?php
+/*
+* Vista editarDepartamentos.
+*
+* Autor: David Romero
+*/
 require_once "model/Departamento.php";
 $codigo = $_GET['CodDepartamento'];
 $descripcion = $_GET['DescDepartamento'];
