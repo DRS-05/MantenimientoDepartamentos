@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Departamento</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+		</div>
+
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-DBPDO.html">DBPDO</a></li>
+				<li class="active"><a href="class-Departamento.html">Departamento</a></li>
+				<li><a href="class-DepartamentoPDO.html">DepartamentoPDO</a></li>
+				<li><a href="class-Usuario.html">Usuario</a></li>
+				<li><a href="class-UsuarioPDO.html">UsuarioPDO</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-UsuarioDB.html">UsuarioDB</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Departamento</h1>
+
+
+	<div class="description">
+	<p>Departamentos que hay en la aplicación.</p>
+
+<p>Departamentos que hay en la aplicación.</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+				<b>Author:</b>
+				David Romero<br>
+			<b>Located at</b> <a href="source-class-Departamento.html#3-125" title="Go to source code">Departamento.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Departamento.html#15-24" title="Go to source code">__construct</a>( <span>String <var>$codDepartamento</var></span>, <span>String <var>$descDepartamento</var></span> )</code>
+
+		<div class="description short">
+			<p>Constructor.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructor.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$codDepartamento</var></dt>
+					<dd>Código del departamento.</dd>
+					<dt><var>$descDepartamento</var></dt>
+					<dd>Descripción del departamento.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="buscarDepartamento" id="_buscarDepartamento">
+
+		<td class="attributes"><code>
+			 public static
+
+			array[]
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_buscarDepartamento">#</a>
+		<code><a href="source-class-Departamento.html#26-44" title="Go to source code">buscarDepartamento</a>( <span>String <var>$descripcion</var></span> )</code>
+
+		<div class="description short">
+			<p>Busca departamentos a partir de su descripción.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Busca departamentos a partir de su descripción.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$descripcion</var></dt>
+					<dd>Descripción del departamento.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array[]<br>$arrayDepartamentos     Array que contiene los departamentos encontrados.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insertarDepartamento" id="_insertarDepartamento">
+
+		<td class="attributes"><code>
+			 public static
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_insertarDepartamento">#</a>
+		<code><a href="source-class-Departamento.html#46-58" title="Go to source code">insertarDepartamento</a>( <span>String <var>$codigo</var></span>, <span>String <var>$descripcion</var></span> )</code>
+
+		<div class="description short">
+			<p>Inserta un departamento a partir de su código y descripción.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Inserta un departamento a partir de su código y descripción.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$codigo</var></dt>
+					<dd>Código del departamento.</dd>
+					<dt><var>$descripcion</var></dt>
+					<dd>Descripción del departamento.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>$resultadoInsertar  Concreta si la operación se ha realizado correctamente o no.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="borrarDepartamento" id="_borrarDepartamento">
+
+		<td class="attributes"><code>
+			 public static
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_borrarDepartamento">#</a>
+		<code><a href="source-class-Departamento.html#60-70" title="Go to source code">borrarDepartamento</a>( <span>String <var>$codigo</var></span> )</code>
+
+		<div class="description short">
+			<p>Borra un departamento a partir de su código.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Borra un departamento a partir de su código.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$codigo</var></dt>
+					<dd>Código del departamento.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>$borradoOk       Concreta si la operación se ha realizado correctamente o no.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="modificarDepartamento" id="_modificarDepartamento">
+
+		<td class="attributes"><code>
+			 public static
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_modificarDepartamento">#</a>
+		<code><a href="source-class-Departamento.html#73-84" title="Go to source code">modificarDepartamento</a>( <span>String <var>$codigo</var></span>, <span>String <var>$descripcion</var></span> )</code>
+
+		<div class="description short">
+			<p>Modifica la descripción de un departamento a partir de su código.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Modifica la descripción de un departamento a partir de su código.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$codigo</var></dt>
+					<dd>Código del departamento.</dd>
+					<dt><var>$descripcion</var></dt>
+					<dd>Nueva descripción del departamento.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>$modificadoOk       Concreta si la operación se ha realizado correctamente o no.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="mostrarDepartamentos" id="_mostrarDepartamentos">
+
+		<td class="attributes"><code>
+			 public static
+
+			array[]
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_mostrarDepartamentos">#</a>
+		<code><a href="source-class-Departamento.html#86-104" title="Go to source code">mostrarDepartamentos</a>( )</code>
+
+		<div class="description short">
+			<p>Mostrar todos los departamentos.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Mostrar todos los departamentos.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array[]<br>$arrayDepartamentos     Array que contiene los departamentos encontrados.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCodDepartamento" id="_getCodDepartamento">
+
+		<td class="attributes"><code>
+			 public 
+
+			String
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCodDepartamento">#</a>
+		<code><a href="source-class-Departamento.html#106-113" title="Go to source code">getCodDepartamento</a>( )</code>
+
+		<div class="description short">
+			<p>Devuelve el código de un departamento.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Devuelve el código de un departamento.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					String<br>$this->codDepartamento      Código del departamento.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDescDepartamento" id="_getDescDepartamento">
+
+		<td class="attributes"><code>
+			 public 
+
+			String
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDescDepartamento">#</a>
+		<code><a href="source-class-Departamento.html#115-122" title="Go to source code">getDescDepartamento</a>( )</code>
+
+		<div class="description short">
+			<p>Devuelve la descripción de un departamento.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Devuelve la descripción de un departamento.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					String<br>$this->descDepartamento      Descripción del departamento.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="codDepartamento" id="$codDepartamento">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Departamento.html#12" title="Go to source code"><var>$codDepartamento</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$codDepartamento" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="descDepartamento" id="$descDepartamento">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Departamento.html#13" title="Go to source code"><var>$descDepartamento</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$descDepartamento" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

@@ -1,9 +1,20 @@
 <?php 
 
 require_once"DBPDO.php";
-
+/**
+ * Operacaciones de los departamentos.
+ * 
+ * Operacaciones de los departamentos.
+ * 
+ * @author Pablo Domínguez Navarro
+ */
 class DepartamentoPDO {
-
+	/**
+     * Busca departamentos a partir de su descripción.
+     *
+     * @param   String      $descripcion            Descripción del departamento.
+     * @return  array[]     $arrayDepartamentos     Array que contiene los departamentos encontrados.
+     */
 	public static function buscarDepartamento($descripcion) {
 		$arrayDepartamentos = [];
 		$parametrosConsulta = ["%$descripcion%"];
@@ -17,6 +28,13 @@ class DepartamentoPDO {
 		return $arrayDepartamentos;
 	}
 
+	/**
+     * Inserta un departamento a partir de su código y descripción.
+     *
+     * @param   String      $codigo         Código del departamento.
+     * @param   String      $descripcion    Descripción del departamento.
+     * @return  boolean     $departamentoInsertado       Concreta si la operación se ha realizado correctamente o no.
+     */
 	public static function insertarDepartamento($codigo,$descripcion) {
 		$departamentoInsertado = false;
 		$parametrosConsulta = [$codigo,$descripcion];
@@ -28,6 +46,13 @@ class DepartamentoPDO {
 		return $departamentoInsertado;
 	}
 
+	/**
+     * Modifica la descripción de un departamento a partir de su código.
+     *
+     * @param   String      $codigo         Código del departamento.
+     * @param   String      $descripcion    Nueva descripción del departamento.
+     * @return  boolean     $departamentoModificado       Concreta si la operación se ha realizado correctamente o no.
+     */
 	public static function modificarDepartamento($codigo,$descripcion) {
 		$departamentoModificado = false;
 		$parametrosConsulta = [$descripcion,$codigo];
@@ -41,6 +66,12 @@ class DepartamentoPDO {
 
 	}
 
+	/**
+     * Borra un departamento a partir de su código.
+     *
+     * @param   String      $codigo         Código del departamento.
+     * @return  boolean     $departamentoBorrado       Concreta si la operación se ha realizado correctamente o no.
+     */
 	public static function borrarDepartamento($codigo) {
 		$departamentoBorrado = false;
 		$parametrosConsulta =[$codigo];
@@ -54,6 +85,12 @@ class DepartamentoPDO {
 		return $departamentoBorrado;
 	}
 
+	/**
+     * Mostrar todos los departamentos.
+     *
+     * @return  array[]     $arrayDepartamentos     Array que contiene los departamentos encontrados.
+     * 
+     */
 	public static function mostrarDepartamentos(){
 		$arrayDepartamentos = [];
 		$sql = "select * from Departamento";

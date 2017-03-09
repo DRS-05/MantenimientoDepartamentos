@@ -1,15 +1,23 @@
 <?php
 /**
-* Clase que ejecuta las consultas de la base de datos
-* 
-*
-*Autor: David Romero
-*/
+ * Conexión a la base de datos.
+ * 
+ * Conexión a la base de datos.
+ * 
+ * @author David Romero
+ */
 class DBPDO {
-	const DSN='mysql:dbname=DAW205_DBDepartamento;host=localhost;charset=utf8';
+	const DSN ='mysql:dbname=DAW205_DBDepartamento;host=localhost;charset=utf8';
 	const USUARIO='DAW205';
 	const PASS='paso';
-
+	
+	/**
+	 * Ejecuta una sentencia SQL.
+	 * 
+	 * @param 	String 			$sql 		Sentencia preparada SQL.
+     * @param 	array[] 		$parametros 		Parámetros de la consulta.
+     * @return 	PDOStatement 	$sentenciaPreparada 	Información del registro.
+	*/
 	public static function ejecutaConsulta($sql,$parametros) {
 		try{
 			//Creamos el objeto de la conexion

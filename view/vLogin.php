@@ -13,6 +13,10 @@
 		</p>
 	</div>
 </form>
+<div>
+	<a href="doc/index.html">Documentación PHPDOC</a>
+	<a href="https://github.com/DRS-05/MantenimientoDepartamentos">GITHUB  DEPARTAMENTO</a>	
+</div>
 
 <div>
 	<h2>Diagrama Clases</h2>
